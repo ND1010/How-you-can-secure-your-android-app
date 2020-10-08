@@ -97,19 +97,18 @@
     ```$ keytool -list -v -keystore [keystore path] -alias [alias-name] -storepass [storepass] -keypass [keypass]```
 
 #### Some commands:-
-    
-    ```http://alvinalexander.com/java/java-keytool-keystore-certificates
 
-    http://alvinalexander.com/java/java-using-keytool-genkey-private-key-keystore
+- http://alvinalexander.com/java/java-keytool-keystore-certificates
 
-    http://alvinalexander.com/java/java-keytool-keystore-certificates
+- http://alvinalexander.com/java/java-using-keytool-genkey-private-key-keystore
 
-    http://alvinalexander.com/java/java-using-keytool-list-query
+- http://alvinalexander.com/java/java-keytool-keystore-certificates
 
-    http://alvinalexander.com/java/java-using-keytool-certificate-file-create
+- http://alvinalexander.com/java/java-using-keytool-list-query
 
-    https://www.digitalocean.com/community/tutorials/java-keytool-essentials-working-with-java-keystores
+- http://alvinalexander.com/java/java-using-keytool-certificate-file-create
 
+- https://www.digitalocean.com/community/tutorials/java-keytool-essentials-working-with-java-keystores
 
 #### 1) View Java keystore information with "keytool list"
 
