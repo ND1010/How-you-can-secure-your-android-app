@@ -200,7 +200,7 @@ At this point, assuming everything worked, you probably don't need the intermedi
 - OpenSSL is a general purpose cryptography library that provides an open source implementation of the Secure Sockets Layer (SSL) and Transport Layer Security (TLS) protocols.
 - The library includes tools for generating RSA private keys and Certificate Signing Requests (CSRs), checksums, managing certificates and performing encryption/decryption. OpenSSL is written in C, but wrappers are available for a wide variety of computer languages.
 - As of this writing, it’s estimated that 66% of all Web servers use OpenSSL. The OpenSSL toolkit is licensed under an Apache-style license.
-- You can generate your application signature (keyhash) using keytool that comes with java. But to generate signature you need openssl installed on your pc. If you don’t have one download openssl from here
+- You can generate your application signature (keyhash) using keytool that comes with java. But to generate signature you need openssl installed on your pc. If you don’t have one download openssl from here(https://code.google.com/archive/p/openssl-for-windows/downloads)
 
     - (If you have a 64 bit machine you must download openssl-0.9.8e X64 not the latest version)
 
