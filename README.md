@@ -43,7 +43,7 @@
     - Strong security that balances great encryption and good performance. This level of security is appropriate for consumer apps, such as banking and chat apps, as well as enterprise apps that perform certificate revocation checking.
     - Maximum security. This level of security is appropriate for apps that require a hardware-backed keystore and user presence for providing key access.
     - **Key management**
-    	- A keyset that contains one or more keys to encrypt a file or shared preferences data. The keyset itself is stored in SharedPreferences. 
+    	- A keyset that contains one or more keys to encrypt a file or shared preferences data. The keyset itself is stored in `SharedPreferences`. 
 
 
 
