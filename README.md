@@ -9,6 +9,7 @@
 
 ## Contents - How you can secure your app?
 
+* [Introduction](#introduction-security)
 * [Encrypt your data](#encrypt-your-data)
 * [Detect insecure devices](#detect-insecure-devices)
 * [Authenticate users and keys with biometrics](#authenticate-users-and-keys-with-biometrics)
@@ -27,6 +28,11 @@
 * [Get Key Fingerprints](#get-key-fingerprints)
 * [Tools You need](#tools-you-need)
 * [Other Security Stuffs](#other-security-stuffs)
+
+
+### Introduction Security
+-Our goal is to make Android the safest mobile platform in the world. That's why we consistently invest in technologies that bolster the security of the platform, its apps, and the global Android ecosystem.
+-It's a responsibility we share with you, as developers, to keep users safe and secure.
 
 
 
