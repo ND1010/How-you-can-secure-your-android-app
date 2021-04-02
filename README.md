@@ -31,6 +31,7 @@
 
 
 ### Introduction Security
+
 -Our goal is to make Android the safest mobile platform in the world. That's why we consistently invest in technologies that bolster the security of the platform, its apps, and the global Android ecosystem.
 -It's a responsibility we share with you, as developers, to keep users safe and secure.
 
@@ -38,9 +39,10 @@
 ### Encrypt your data
 
 -The Security library provides an implementation of the [security best practices](https://developer.android.com/topic/security/best-practices) related to reading and writing data at rest, as well as key creation and verification.
+
 -The library uses the builder pattern to provide safe default settings for the following security levels:
-	-**Strong security that balances great encryption and good performance.** This level of security is appropriate for consumer apps, such as banking and chat apps, as well as enterprise apps that perform certificate revocation checking.
-	-**Maximum security.** This level of security is appropriate for apps that require a hardware-backed keystore and user presence for providing key access.
+    - Strong security that balances great encryption and good performance. This level of security is appropriate for consumer apps, such as banking and chat apps, as well as enterprise apps that perform certificate revocation checking.
+    - Maximum security. This level of security is appropriate for apps that require a hardware-backed keystore and user presence for providing key access.
 	
 
 ### Introduction
