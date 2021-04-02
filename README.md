@@ -48,6 +48,9 @@
     - **Classes included in library**
     	- **EncryptedFile:** Provides custom implementations of `FileInputStream` and `FileOutputStream`, granting your app more secure streaming read and write operations.
     	- **EncryptedSharedPreferences:** Wraps the SharedPreferences class and automatically encrypts keys and values using a two-scheme method:
+    		- **Keys** are encrypted using a deterministic encryption algorithm such that the key can be encrypted and properly looked up.
+    		- **Values** are encrypted using AES-256 GCM and are non-deterministic.
+
 
 ### Introduction
 
