@@ -2,20 +2,32 @@
 <img alt="HashCodeGeneration" src="https://miro.medium.com/max/700/1*ZebUrjnenSmQgBf5ddjpXg.png">
 </p>
 
-# How you can secure your application?
-
+# How you can secure your app?
 # Hash-code-generation-Singing-apk
 
 ## Prepared and maintained by [Dhruv Nirmal](https://github.com/nd1010) who is having experience of Android development, Security & financial services(Fin Tech).
 
+## Contents - How you can secure your app?
 
-## Contents
+* [Encrypt your data](#encrypt-your-data)
+* [Detect insecure devices](#detect-insecure-devices)
+* [Authenticate users and keys with biometrics](#authenticate-users-and-keys-with-biometrics)
+* [Communicate securely](#communicate-securely)
+* [Address issues found by Google Play](#address-issues-found-by-google-play)
+* [Be the first to know](#be-the-first-to-know)
+* [Test, test, and test again](#Test,-est,-nd-test-again)
+* [Audit third-party libraries](#audit-third-party-libraries)
+
+
+
+## Contents - Hash-code-generation-Singing-apk
 
 * [Introduction](#introduction)
 * [Methods to Sign in App](#methods-to-sign-in-app)
 * [Get Key Fingerprints](#get-key-fingerprints)
 * [Tools You need](#tools-you-need)
 * [Other Security Stuffs](#other-security-stuffs)
+
 
 
 ### Introduction
