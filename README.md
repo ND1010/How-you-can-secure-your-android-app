@@ -2,8 +2,8 @@
 <img alt="HashCodeGeneration" src="https://miro.medium.com/max/700/1*ZebUrjnenSmQgBf5ddjpXg.png">
 </p>
 
-### How you can secure your app?
-### Hash-code-generation-Singing-apk
+# How you can secure your app?
+# Hash-code-generation-Singing-apk.
 
 ## Prepared and maintained by [Dhruv Nirmal](https://github.com/nd1010) who is having experience of Android development, Security & financial services(Fin Tech).
 
@@ -33,6 +33,8 @@
 ### Introduction Security
 -Our goal is to make Android the safest mobile platform in the world. That's why we consistently invest in technologies that bolster the security of the platform, its apps, and the global Android ecosystem.
 -It's a responsibility we share with you, as developers, to keep users safe and secure.
+
+
 
 
 
