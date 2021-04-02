@@ -43,9 +43,11 @@
     - Strong security that balances great encryption and good performance. This level of security is appropriate for consumer apps, such as banking and chat apps, as well as enterprise apps that perform certificate revocation checking.
     - Maximum security. This level of security is appropriate for apps that require a hardware-backed keystore and user presence for providing key access.
     - **Key management**
-    	- A keyset that contains one or more keys to encrypt a file or shared preferences data. The keyset itself is stored in `SharedPreferences`. 
-
-
+    	- A **keyset** that contains one or more keys to encrypt a file or shared preferences data. The keyset itself is stored in `SharedPreferences`. 
+    	- A **primary (master) key** that encrypts all keysets. This key is stored using the Android keystore system.
+    - **Classes included in library**
+    	- **EncryptedFile:** Provides custom implementations of `FileInputStream` and `FileOutputStream`, granting your app more secure streaming read and write operations.
+    	- **EncryptedSharedPreferences:** Wraps the SharedPreferences class and automatically encrypts keys and values using a two-scheme method:
 
 ### Introduction
 
