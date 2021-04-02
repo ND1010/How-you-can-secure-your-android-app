@@ -2,8 +2,8 @@
 <img alt="HashCodeGeneration" src="https://miro.medium.com/max/700/1*ZebUrjnenSmQgBf5ddjpXg.png">
 </p>
 
-# How you can secure your app?
-# Hash-code-generation-Singing-apk
+### How you can secure your app?
+### Hash-code-generation-Singing-apk
 
 ## Prepared and maintained by [Dhruv Nirmal](https://github.com/nd1010) who is having experience of Android development, Security & financial services(Fin Tech).
 
