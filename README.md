@@ -152,22 +152,6 @@ The following code snippet demonstrates how to use `EncryptedSharedPreferences` 
 ```
 
 
-### Detect insecure devices
-
-- Rooted or unlocked devices, or emulators may fail to protect user data and expose your app to attack. Use SafetyNet Attestation to determine if a device running your app has been tampered with. Based on the results from SafetyNet Attestation, consider acting to protect your app’s content.
-- The SafetyNet Attestation API is an anti-abuse API that allows app developers to assess the Android device their app is running on. The API should be used as a part of your abuse detection system to help determine whether your servers are interacting with your genuine app running on a genuine Android device.
-- The SafetyNet Attestation API provides a cryptographically-signed attestation, assessing the device's integrity. In order to create the attestation, the API examines the device's software and hardware environment, looking for integrity issues, and comparing it with the reference data for approved Android devices. The generated attestation is bound to the nonce that the caller app provides. The attestation also contains a generation timestamp and metadata about the requesting app.
-- The API is not designed to fulfill the following use cases:
-
-	- Act as a stand-alone anti-abuse or app-security mechanism. Please use it in combination with the published [best practices for app security](https://developer.android.com/topic/security/best-practices) and your suite of product-specific anti-abuse signals.
-	- Function when the device isn't connected to the internet. The API returns an error in such scenarios.
-	- Have its response interpreted directly in the calling app. Move all anti-abuse decision logic to a server under your control.
-	- Provide fine-grained signals about system modifications. The API offers boolean values that express different levels of system integrity.
-	- Contain signals for app-specific use-cases, such as device identifiers, GPS emulation status, and screen lock status.
-	- Replace or implement strong DRM checks.
-	- Purely to check whether the device is rooted, as the API is designed to check the overall integrity of the device.
-
-
 
 
 # Hash-code-generation-Singing-apk
