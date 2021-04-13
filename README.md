@@ -130,8 +130,31 @@ Write files The following code snippet demonstrates how to use `EncryptedFile` t
 3. Override `onActivityResult()` to get the confirmed credential callback.
 
 
+For more information, see [Requiring user authentication for key use.](https://developer.android.com/training/articles/keystore#UserAuthentication)
+
+Edit shared preferences : 
+The following code snippet demonstrates how to use `EncryptedSharedPreferences` to edit a user's set of shared preferences in a more secure way:
+
+```kotlin
+	val sharedPrefsFile: String = FILE_NAME
+	val sharedPreferences: SharedPreferences = EncryptedSharedPreferences.create(
+		applicationContext,
+		sharedPrefsFile,
+		mainKey,
+		EncryptedSharedPreferences.PrefKeyEncryptionScheme.AES256_SIV,
+		EncryptedSharedPreferences.PrefValueEncryptionScheme.AES256_GCM
+	)
+
+	with (sharedPreferences.edit()) {
+	    // Edit the user's shared preferences...
+	    apply()
+	}
+```
 
 
+
+
+# Hash-code-generation-Singing-apk
 
 ### Introduction
 
