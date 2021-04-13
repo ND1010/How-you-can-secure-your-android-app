@@ -63,6 +63,34 @@
 			}
 ```
 
+		- The following code snippet demonstrates how to use EncryptedFile to read the contents of a file in a more secure way:
+
+```kotlin
+
+	// Although you can define your own key generation parameter specification, it's
+	// recommended that you use the value specified here.
+	val mainKey = MasterKey.Builder(applicationContext)
+	.setKeyScheme(MasterKey.KeyScheme.AES256_GCM)
+	.build()
+	val fileToRead = "my_sensitive_data.txt"
+	val encryptedFile = EncryptedFile.Builder(
+	applicationContext,
+	File(DIRECTORY, fileToRead),
+	mainKey,
+	EncryptedFile.FileEncryptionScheme.AES256_GCM_HKDF_4KB
+	).build()
+
+	val inputStream = encryptedFile.openFileInput()
+	val byteArrayOutputStream = ByteArrayOutputStream()
+	var nextByte: Int = inputStream.read()
+	while (nextByte != -1) {
+	byteArrayOutputStream.write(nextByte)
+	nextByte = inputStream.read()
+	}
+
+	val plaintext: ByteArray = byteArrayOutputStream.toByteArray()
+
+```
 
 
 ### Introduction
