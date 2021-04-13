@@ -63,7 +63,7 @@
 			}
 ```
 
-		- The following code snippet demonstrates how to use EncryptedFile to read the contents of a file in a more secure way:
+**The following code snippet demonstrates how to use EncryptedFile to read the contents of a file in a more secure way:**
 
 ```kotlin
 
