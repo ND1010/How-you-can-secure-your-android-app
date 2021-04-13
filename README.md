@@ -50,6 +50,12 @@
     	- **EncryptedSharedPreferences:** Wraps the SharedPreferences class and automatically encrypts keys and values using a two-scheme method:
     		- **Keys** are encrypted using a deterministic encryption algorithm such that the key can be encrypted and properly looked up.
     		- **Values** are encrypted using AES-256 GCM and are non-deterministic.
+    
+	- **The following sections show how to use these classes to perform common operations with files and shared preferences.**
+		- To use the Security library, add the following dependency to your app module's build.gradle file:
+			
+
+
 
 
 ### Introduction
