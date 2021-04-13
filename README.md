@@ -54,7 +54,14 @@
 	- **The following sections show how to use these classes to perform common operations with files and shared preferences.**
 		- To use the Security library, add the following dependency to your app module's build.gradle file:
 			
+```
+			dependencies {
+			implementation "androidx.security:security-crypto:1.0.0-rc04"
 
+			// For Identity Credential APIs
+			implementation "androidx.security:security-identity-credential:1.0.0-alpha02"
+			}
+```
 
 
 
