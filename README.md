@@ -152,6 +152,8 @@ The following code snippet demonstrates how to use `EncryptedSharedPreferences` 
 ```
 
 
+### Detect insecure devices
+
 
 
 # Hash-code-generation-Singing-apk
