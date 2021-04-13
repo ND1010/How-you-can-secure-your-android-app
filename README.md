@@ -165,6 +165,7 @@ The following code snippet demonstrates how to use `EncryptedSharedPreferences` 
 	- Contain signals for app-specific use-cases, such as device identifiers, GPS emulation status, and screen lock status.
 	- Replace or implement strong DRM checks.
 	- Purely to check whether the device is rooted, as the API is designed to check the overall integrity of the device.
+	- [Learn more...](https://developer.android.com/training/safetynet/attestation)
 
 
 
