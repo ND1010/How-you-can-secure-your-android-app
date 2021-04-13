@@ -63,7 +63,7 @@
 			}
 ```
 
-**The following code snippet demonstrates how to use EncryptedFile to read the contents of a file in a more secure way:**
+Read Files The following code snippet demonstrates how to use EncryptedFile to read the contents of a file in a more secure way:
 
 ```kotlin
 
@@ -92,10 +92,51 @@
 
 ```
 
+Write files The following code snippet demonstrates how to use `EncryptedFile` to write the contents of a file in a more secure way:
+
+```kotlin
+
+	// Although you can define your own key generation parameter specification, it's
+	// recommended that you use the value specified here.
+	val mainKey = MasterKey.Builder(applicationContext)
+	.setKeyScheme(MasterKey.KeyScheme.AES256_GCM)
+	.build()
+
+	// Create a file with this name, or replace an entire existing file
+	// that has the same name. Note that you cannot append to an existing file,
+	// and the file name cannot contain path separators.
+	val fileToWrite = "my_sensitive_data.txt"
+	val encryptedFile = EncryptedFile.Builder(
+	applicationContext,
+	File(DIRECTORY, fileToWrite),
+	mainKey,
+	EncryptedFile.FileEncryptionScheme.AES256_GCM_HKDF_4KB
+	).build()
+
+	val fileContent = "MY SUPER-SECRET INFORMATION"
+	.toByteArray(StandardCharsets.UTF_8)
+	encryptedFile.openFileOutput().apply {
+	write(fileContent)
+	flush()
+	close()
+	}
+
+```
+
+**For use cases requiring additional security, complete the following steps:**
+
+1. Create a `KeyGenParameterSpec.Builder` object, passing `true` into [setUserAuthenticationRequired()](https://developer.android.com/reference/android/security/keystore/KeyGenParameterSpec.Builder#setUserAuthenticationRequired(boolean)) and a value greater than 0 into [setUserAuthenticationValidityDurationSeconds().](https://developer.android.com/reference/android/security/keystore/KeyGenParameterSpec.Builder#setUserAuthenticationValidityDurationSeconds(int))
+2. Prompt the user to enter credentials using createConfirmDeviceCredentialIntent(). Learn more about how to request [user authentication for key use.](https://developer.android.com/training/articles/keystore#UserAuthentication)
+3. Override `onActivityResult()` to get the confirmed credential callback.
+
+
+
+
 
 ### Introduction
 
-- An android developer A ,develops an app and placed it in playstore.What if any person b ,somewhat got the password for paystore console.He can easily manipulate(updated the app with malicious code ) on existing the apps of A.
+- An android developer A ,develops an app and placed it in playstore.What if any person b ,somewhat got the password for paystore console.He can easily manipulate(updated the app with malicious code ) 
+- on existing the apps of A.
 - How google people know ,whether the updated app  came from authorized person/developer ?
 - So to tackle this problem,Super Intelligent people designs:- SSL/HTTP  --> in internet World
 - Similarly in Android we have to Sign the App with our credentials(private key/public keys) .
