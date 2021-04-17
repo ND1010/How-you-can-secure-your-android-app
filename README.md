@@ -187,6 +187,19 @@ The following code snippet demonstrates how to use `EncryptedSharedPreferences` 
 	- [Learn More...](https://developer.android.com/training/articles/security-ssl)
 
 
+### Address issues found by Google Play
+- The App Security Improvement program is a service that helps detect known security vulnerabilities in your app. This service automatically scans your app as it’s submitted to Google Play. If any vulnerabilities are discovered, you get alerts by email and in the Google Play Console, with links to details about how to improve your app.
+- [App security improvement program](https://developer.android.com/google/play/asi)
+- The App Security Improvement program is a service provided to Google Play app developers to improve the security of their apps. The program provides tips and recommendations for building more secure apps and identifies potential security enhancements when your apps are uploaded to Google Play. To date, the program has facilitated developers to fix over 1,000,000 apps on Google Play.
+- **How it works **
+	- Before any app is accepted into Google Play, we scan it for safety and security, including potential security issues. We also continuously re-scan the over one million apps on Google Play for additional threats.
+	- If your app is flagged for a potential security issue, we'll notify you immediately to help you quickly address the issue and help keep your users safe. We’ll deliver alerts to you using both email and the Google Play Console, with links to a support page with details about how to improve the app.
+	- Typically, these notifications will include a timeline for delivering the improvement to users as quickly as possible. For some kinds of issues, we may require you to make security improvements in the app before you can publish any more updates to it.
+	- You can confirm that you’ve fully addressed the issue by uploading the new version of your app to the Google Play Console. Be sure to increment the version number of the fixed app. After a few hours, check the Play Console for the security alert; if it’s no longer there, you’re all set.
+	- Example of a security improvement alert for an app in the Play Console.
+		- ![](https://developer.android.com/images/google/asi_warning.png)
+
+
 
 # Hash-code-generation-Singing-apk
 
