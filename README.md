@@ -191,7 +191,7 @@ The following code snippet demonstrates how to use `EncryptedSharedPreferences` 
 - The App Security Improvement program is a service that helps detect known security vulnerabilities in your app. This service automatically scans your app as it’s submitted to Google Play. If any vulnerabilities are discovered, you get alerts by email and in the Google Play Console, with links to details about how to improve your app.
 - [App security improvement program](https://developer.android.com/google/play/asi)
 - The App Security Improvement program is a service provided to Google Play app developers to improve the security of their apps. The program provides tips and recommendations for building more secure apps and identifies potential security enhancements when your apps are uploaded to Google Play. To date, the program has facilitated developers to fix over 1,000,000 apps on Google Play.
-- **How it works **
+- **How it works**
 	- Before any app is accepted into Google Play, we scan it for safety and security, including potential security issues. We also continuously re-scan the over one million apps on Google Play for additional threats.
 	- If your app is flagged for a potential security issue, we'll notify you immediately to help you quickly address the issue and help keep your users safe. We’ll deliver alerts to you using both email and the Google Play Console, with links to a support page with details about how to improve the app.
 	- Typically, these notifications will include a timeline for delivering the improvement to users as quickly as possible. For some kinds of issues, we may require you to make security improvements in the app before you can publish any more updates to it.
@@ -200,6 +200,32 @@ The following code snippet demonstrates how to use `EncryptedSharedPreferences` 
 		![](https://developer.android.com/images/google/asi_warning.png)
 	- [Learn More...](https://developer.android.com/google/play/asi)
 
+
+### Be the first to know
+- You cannot eliminate the possibility of there being undetected vulnerabilities in your app. Security researchers commonly assess new and updated apps for security issues. By setting up a vulnerability disclosure program (VDP) you provide guidelines for these experts to disclose vulnerabilities to you. The guidelines should include policy, rules of engagement, scope, and safe harbor.
+- [Learn More...](https://developers.google.com/android/play-protect/starting-a-vdp)
+
+### Test, test, and test again
+- Security issues can creep into even the most carefully crafted app. One way to guard against unexpected errors or security issues is to have a comprehensive testing program throughout your development lifecycle.
+- Follow best practices for preparing and executing your tests, and take advantage of the services offered by Firebase Test Labs to automatically execute tests on a range of devices
+- [Fundamentals of Testing](https://developer.android.com/security)
+- Users interact with your app on a variety of levels, from pressing a button to downloading information onto their device. Accordingly, you should test a variety of use cases and interactions as you iteratively develop your app.
+- **Organize your code for testing**
+	- As your app expands, you might find it necessary to fetch data from a server, interact with the device's sensors, access local storage, or render complex user interfaces. The versatility of your app demands a comprehensive testing strategy.
+	- Create and test code iteratively
+		- When developing a feature iteratively, you start by either writing a new test or by adding cases and assertions to an existing unit test. The test fails at first because the feature isn't implemented yet.
+		- It's important to consider the units of responsibility that emerge as you design the new feature. For each unit, you write a corresponding unit test. Your unit tests should nearly exhaust all possible interactions with the unit, including standard interactions, invalid inputs, and cases where resources aren't available. Take advantage of [Jetpack libraries](https://developer.android.com/jetpack) whenever possible; when you use these well-tested libraries, you can focus on validating behavior that's specific to your app.
+		- The two cycles associated with iterative, test-driven
+		- ![](https://developer.android.com/images/training/testing/testing-workflow.png)
+		- The full workflow, as shown in Figure 1, contains a series of nested, iterative cycles where a long, slow, UI-driven cycle tests the integration of code units. You test the units themselves using shorter, faster development cycles. This set of cycles continues until your app satisfies every use case.
+	- **View your app as a series of modules**
+		- To make your code easier to test, develop your code in terms of modules, where each module represents a specific task that users complete within your app. This perspective contrasts the stack-based view of an app that typically contains layers representing the UI, business logic, and data.
+		- For example, a "task list" app might have modules for creating tasks, viewing statistics about completed tasks, and taking photographs to associate with a particular task. Such a modular architecture also helps you keep unrelated classes decoupled and provides a natural structure for assigning ownership within your development team.
+		- It's important to set well-defined boundaries around each module, and to create new modules as your app grows in scale and complexity. Each module should have only one area of focus, and the APIs that allow for inter-module communication should be consistent. To make it easier and quicker to test these inter-module interactions, consider creating fake implementations of your modules. In your tests, the real implementation of one module can call the fake implementation of the other module.
+		- As you create a new module, however, don't be too dogmatic about making it full-featured right away. It's OK for a particular module to not have one or more layers of the app's stack.
+		- To learn more about how to define modules in your app, as well as platform support for creating and publishing modules, see Android App Bundles.
+		- [Learn More...](https://developer.android.com/training/testing/fundamentals)
+	
 
 
 
