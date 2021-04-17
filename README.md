@@ -16,7 +16,7 @@
 * [Communicate securely](#communicate-securely)
 * [Address issues found by Google Play](#address-issues-found-by-google-play)
 * [Be the first to know](#be-the-first-to-know)
-* [Test, test, and test again](#Test,-est,-nd-test-again)
+* [Test test and test again](#test-test-and-test-again)
 * [Audit third-party libraries](#audit-third-party-libraries)
 
 
@@ -205,7 +205,7 @@ The following code snippet demonstrates how to use `EncryptedSharedPreferences` 
 - You cannot eliminate the possibility of there being undetected vulnerabilities in your app. Security researchers commonly assess new and updated apps for security issues. By setting up a vulnerability disclosure program (VDP) you provide guidelines for these experts to disclose vulnerabilities to you. The guidelines should include policy, rules of engagement, scope, and safe harbor.
 - [Learn More...](https://developers.google.com/android/play-protect/starting-a-vdp)
 
-### Test, test, and test again
+### Test test and test again
 - Security issues can creep into even the most carefully crafted app. One way to guard against unexpected errors or security issues is to have a comprehensive testing program throughout your development lifecycle.
 - Follow best practices for preparing and executing your tests, and take advantage of the services offered by Firebase Test Labs to automatically execute tests on a range of devices
 - [Fundamentals of Testing](https://developer.android.com/security)
@@ -227,6 +227,21 @@ The following code snippet demonstrates how to use `EncryptedSharedPreferences` 
 		- [Learn More...](https://developer.android.com/training/testing/fundamentals)
 	
 
+### Audit third-party libraries
+- Your app may rely on third-party libraries for common use cases. However, third-party libraries can be a source of data leakage, especially those using external services, such as those for marketing and analytics.
+- Audit your third-party libraries to check that you are using the original code from its open source project. Also, check to see whether any libraries are unnecessary. Then remove any libraries you don’t need or where you cannot be sure of the source.
+- This step is important because third-party libraries can cause your app to be flagged as potentially harmful per the Malware or Mobile Unwanted Software policies.
+- [Potentially Harmful Applications (PHAs)](https://developers.google.com/android/play-protect/potentially-harmful-applications)
+	- Potentially Harmful Applications (PHAs) are apps that could put users, user data, or devices at risk. These apps are often generically referred to as malware. We've developed a range of categories for different types of PHAs, including trojans, phishing, and spyware apps, and we are continuously updating and adding new categories.
+	- **Potentially harmful?**
+		- There is some confusion around the ambiguity of the word potentially when used to describe malicious apps. Google Play Protect removes apps that have been flagged as Potentially Harmful because the app does contain malicious behavior not because we are simply unsure if the app is harmful or not. The word potentially is used here because malicious apps function differently depending on a variety of variables thus an app that is harmful to one Android device might not pose a risk at all to another Android device. For example, a device running the latest version of Android is not affected by harmful apps which use deprecated APIs to perform malicious behavior but a device that is still running a very early version of Android might be at risk. Mobile billing fraud poses a risk to devices connected to service carriers but devices which only connect to WIFI are not affected by these apps.
+		- Apps are flagged as a PHA if they clearly pose a risk to some or all Android devices and users.
+	- **User-wanted PHAs**
+		- Some apps that can weaken or disable Android security features aren't categorized as PHAs. These apps provide functionality that users want, such as rooting the device and other development features. Even though these apps are potentially harmful, users install them intentionally, so Google Play Protect manages them differently than other PHAs.
+		- When a user begins to installI an app that's classified as user-wanted, Google Play Protect warns the user of the app's potential hazards just once. The user can decide whether to continue with the installation. After installation, the user-wanted classifications prevents Google Play Protect from sending additional warnings, so there's no disruption to the user experience.
+	- **Classifications**
+		- There are several categories for classifying PHAs that help Play Protect detect them and determine the right action to take. These categories include malicious apps like trojans, spyware, and phishing apps, as well as user-wanted apps. If Play Protect detects a PHA, it displays a warning. For certain malicious apps, Play Protect automatically disables or removes the app. When Play Protect detects that a PHA contains features from multiple categories, it classifies the app based on the most harmful characteristics. For example, if an app applies to both ransomware and spyware categories, the Verify Apps message identifies it as ransomware.
+		- You can view the current PHA categories and definitions [here.](https://developers.google.com/android/play-protect/phacategories)
 
 
 
