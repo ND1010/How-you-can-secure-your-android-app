@@ -197,7 +197,10 @@ The following code snippet demonstrates how to use `EncryptedSharedPreferences` 
 	- Typically, these notifications will include a timeline for delivering the improvement to users as quickly as possible. For some kinds of issues, we may require you to make security improvements in the app before you can publish any more updates to it.
 	- You can confirm that you’ve fully addressed the issue by uploading the new version of your app to the Google Play Console. Be sure to increment the version number of the fixed app. After a few hours, check the Play Console for the security alert; if it’s no longer there, you’re all set.
 	- **Example of a security improvement alert for an app in the Play Console.**
-		!(https://developer.android.com/images/google/asi_warning.png)
+		![](https://developer.android.com/images/google/asi_warning.png)
+	- [Learn More...](https://developer.android.com/google/play/asi)
+
+
 
 
 
