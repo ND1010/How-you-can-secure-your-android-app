@@ -169,6 +169,12 @@ The following code snippet demonstrates how to use `EncryptedSharedPreferences` 
 
 
 
+### Authenticate users and keys with biometrics
+- Use the Biometric APIs, part of the Jetpack BiometricPrompt Library, to take advantage of a device’s biometric sensors when authenticating users in your app.
+- [Show a biometric authentication dialog](https://developer.android.com/training/sign-in/biometric-auth)
+
+
+
 # Hash-code-generation-Singing-apk
 
 ### Introduction
